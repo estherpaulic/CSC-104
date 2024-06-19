@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Shopping Cart</title>
+        <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.recommended-items {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.recommended-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recommended-item img {
+    max-width: 80px;
+    margin-right: 10px;
+}.d1{
+    background-color: pink;
+    width: 60px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}.b1{
+    font-size: small;
+    height: 20px;
+    width: 20px;
+}.p1{
+    font-size: medium;
+    margin-top: -0.5%;
+}.d2{
+    background-color: rgba(128, 128, 128, 0.495);
+    width: 180px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+}.p2{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 5%;
+}.b2{
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 30px;
+    margin-left: 3%;
+}
+    </style>
+    </head>
+    <body>
+        <div class="cart-item">
+            <img src="purifer.jpg" alt="300ml Air Humidifier">
+            <div class="item-details">
+                <h2>300ml Air Humidifier</h2>
+                <p>Color: White</p>
+                <p>Item cannot be returned</p>
+                <p>$20.00</p>
+                <div class="d1">
+                    <button class="b1">+</button>
+                    <p class="p1">2</p>
+                    <button class="b1">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="recommended-items">
+            <h3>You Might Like</h3>
+            <div class="recommended-item">
+                <img src="diffuser.jfif" alt="Fragrance Aroma Oils Diffuser">
+                <p>Fragrance aroma oils diffuser</p>
+                <p>$19.00</p>
+            </div>
+            <div class="recommended-item">
+                <img src="2l.jfif" alt="2l Double Spray Humidifier">
+                <p>2l Double Spray Humidifier</p>
+                <p>$23.00</p>
+            </div>
+            <div class="recommended-item">
+                <img src="hand mist.jfif" alt="Hand Mist">
+                <p>Hand mist</p>
+                <p>$10.00</p>
+            </div>
+            <div class="d2">
+                <p class="p2">$40.00</p>
+                <button class="b2">Check Out (2)</button>
+            </div>
+        </div>
+    </body>
+</html>

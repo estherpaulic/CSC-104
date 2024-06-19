@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Interest Calculator</title>
+        <style>
+    body {
+        background-color: #5912d4;
+        font-family: Arial, sans-serif;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        
+    }
+    .converter {
+        background-color: #40aef3;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(20, 10, 96, 0.2);
+        color: rgb(17, 2, 2);
+        text-align: center;
+        width: 300px;
+    }
+    .converter input, .converter button {
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+    }
+    .converter button {
+        background-color: #0f1418;
+        color: rgb(15, 14, 14);
+        cursor: pointer;
+    }
+    .converter button:hover {
+        background-color: #fae6e6;
+    }
+    .result {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .calculator{
+        border: 2px solid black;
+        height: 250px;
+    }
+</style>
+    </head>
+    <body>
+        <div class="calculator">
+            <h2>Simple Interest Calculator</h2>
+            <div class="principal">
+                <label for="principal">Principal amount:</label>
+                <input type="number" id="principal"
+                    placeholder="Enter principal amount"><br><br>
+
+                <label for="rate">Interest rate (in percentage):</label>
+                <input type="number" id="rate"
+                    placeholder="Enter interest rate"><br><br>
+
+                <label for="time">Time (in years):</label>
+                <input type="number" id="time" placeholder="Enter time"><br><br>
+
+                <button
+                    onclick="calculateSimpleInterest()">Calculate</button><br><br>
+
+                <div id="result"></div>
+            </div>
+            <script>
+function calculateSimpleInterest() {
+    var principal = parseFloat(document.getElementById("principal").value);
+    var rate = parseFloat(document.getElementById("rate").value);
+    var time = parseFloat(document.getElementById("time").value);
+    
+    var interest = (principal * rate * time) / 100;
+    var totalAmount = principal + interest;
+    
+    var resultText = "Principal amount: $" + principal.toFixed(2) + "<br>";
+    resultText += "Interest rate: " + rate.toFixed(2) + "%<br>";
+    resultText += "Time: " + time.toFixed(2) + " years<br>";
+    resultText += "Interest amount: $" + interest.toFixed(2) + "<br>";
+    resultText += "Total amount: $" + totalAmount.toFixed(2);
+    
+    document.getElementById("result").innerHTML = resultText;
+}
+</script>
+
+        </body>
+    </html>
